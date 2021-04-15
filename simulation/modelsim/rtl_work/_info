@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\PraticaIV_AOC2_parte1\simulation\modelsim
+vBUSrequest
+!i10b 1
+!s100 l?1P`GoOni8ahWX6Q4DaL1
+ILa2V^l5Hea[_nQ@<?Ocao0
+V4jbe>a2?G5D^NlS4CkPlX0
+Z1 dC:\PraticaIV_AOC2_parte1\simulation\modelsim
+Z2 w1618323007
+Z3 8C:/PraticaIV_AOC2_parte1/CPUrequest.v
+Z4 FC:/PraticaIV_AOC2_parte1/CPUrequest.v
+L0 96
+Z5 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z6 !s108 1618352820.799000
+Z7 !s107 C:/PraticaIV_AOC2_parte1/CPUrequest.v|
+Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/PraticaIV_AOC2_parte1|C:/PraticaIV_AOC2_parte1/CPUrequest.v|
+!s101 -O0
+Z9 o-vlog01compat -work work -O0
+Z10 !s92 -vlog01compat -work work +incdir+C:/PraticaIV_AOC2_parte1 -O0
+n@b@u@srequest
+vCPUrequest
+!i10b 1
+!s100 5BdWTGWDQ]cW;VUVM<k;a1
+I4gj2GWKefNP^LmOZUXQQ?3
+VlbnMC2FRXQMg:mzS39C470
+R1
+R2
+R3
+R4
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+n@c@p@urequest

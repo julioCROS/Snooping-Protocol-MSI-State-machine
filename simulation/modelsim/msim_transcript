@@ -1,0 +1,146 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do CPUrequest_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/PraticaIV_AOC2_parte1 {C:/PraticaIV_AOC2_parte1/CPUrequest.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPUrequest
+# -- Compiling module BUSrequest
+# 
+# Top level modules:
+# 	CPUrequest
+# 	BUSrequest
+# 
+vsim work.CPUrequest
+# vsim work.CPUrequest 
+# Loading work.CPUrequest
+wave create -driver freeze -pattern repeater -initialvalue 1 -period 200ps -sequence { 1 0 0  } -repeat never -starttime 0ps -endtime 1000ps sim:/CPUrequest/bitMS
+
+wave create -driver freeze -pattern repeater -initialvalue 0 -period 200ps -sequence { 0 0 1  } -repeat never -starttime 0ps -endtime 1000ps sim:/CPUrequest/invalid
+
+wave create -pattern repeater -initialvalue 10 -period 200ps -sequence { 10 00 01  } -repeat never -range 1 0 -starttime 0ps -endtime 1000ps sim:/CPUrequest/MSI
+
+wave create -pattern repeater -initialvalue 10 -period 200ps -sequence { 10 00 01  } -repeat never -range 1 0 -starttime 0ps -endtime 1000ps sim:/CPUrequest/MSI
+# /CPUrequest/MSI already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+
+wave create -driver freeze -pattern repeater -initialvalue 0 -period 50ps -sequence { 0 1 Z Z 0 1 Z Z 0 Z Z Z  } -repeat never -starttime 0ps -endtime 1000ps sim:/CPUrequest/CPU_read_HitMiss
+
+wave create -driver freeze -pattern repeater -initialvalue Z -period 50ps -sequence { Z Z 0 1 Z Z 0 1 Z 0 Z Z  } -repeat never -starttime 0ps -endtime 1000ps sim:/CPUrequest/CPU_write_HitMiss
+
+add wave -position insertpoint  \
+sim:/CPUrequest/next_MSI \
+sim:/CPUrequest/invalidate \
+sim:/CPUrequest/read_miss \
+sim:/CPUrequest/write_miss \
+sim:/CPUrequest/write_back
+
+restart -f
+wave create -driver freeze -pattern repeater -initialvalue 1 -period 100ps -sequence { 1 1 0 0 0  } -repeat never -starttime 0ps -endtime 1000ps sim:/CPUrequest/bitMS
+
+wave create -driver freeze -pattern repeater -initialvalue 0 -period 200ps -sequence { 0 0 0 0 1  } -repeat never -starttime 0ps -endtime 1000ps sim:/CPUrequest/invalid
+
+wave create -pattern repeater -initialvalue 10 -period 100ps -sequence { 10 10 00 00 01  } -repeat never -range 1 0 -starttime 0ps -endtime 1000ps sim:/CPUrequest/MSI
+
+wave create -pattern repeater -initialvalue 10 -period 100ps -sequence { 10 10 00 00 01  } -repeat never -range 1 0 -starttime 0ps -endtime 1000ps sim:/CPUrequest/MSI
+# /CPUrequest/MSI already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+
+wave create -driver freeze -pattern repeater -initialvalue 0 -period 50ps -sequence { 0 1 Z Z 0 1 Z Z 0 Z  } -repeat never -starttime 0ps -endtime 1000ps sim:/CPUrequest/CPU_read_HitMiss
+
+wave create -driver freeze -pattern repeater -initialvalue Z -period 50ps -sequence { Z Z 0 1 Z Z 0 1 Z 0  } -repeat never -starttime 0ps -endtime 1000ps sim:/CPUrequest/CPU_write_HitMiss
+
+add wave -position insertpoint  \
+sim:/CPUrequest/next_MSI \
+sim:/CPUrequest/invalidate \
+sim:/CPUrequest/read_miss \
+sim:/CPUrequest/write_miss \
+sim:/CPUrequest/write_back
+
+restart -f
+wave create -driver freeze -pattern repeater -initialvalue 1 -period 100ps -sequence { 1 1 0 0 0  } -repeat never -starttime 0ps -endtime 1000ps sim:/CPUrequest/bitMS
+
+wave create -driver freeze -pattern repeater -initialvalue 0 -period 100ps -sequence { 0 0 0 0 1  } -repeat never -starttime 0ps -endtime 1000ps sim:/CPUrequest/invalid
+
+wave create -pattern repeater -initialvalue 10 -period 100ps -sequence { 10 10 00 00 01  } -repeat never -range 1 0 -starttime 0ps -endtime 1000ps sim:/CPUrequest/MSI
+
+wave create -pattern repeater -initialvalue 10 -period 100ps -sequence { 10 10 00 00 01  } -repeat never -range 1 0 -starttime 0ps -endtime 1000ps sim:/CPUrequest/MSI
+# /CPUrequest/MSI already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+
+wave create -driver freeze -pattern repeater -initialvalue 0 -period 50ps -sequence { 0 1 Z Z 0 1 Z Z 0 Z  } -repeat never -starttime 0ps -endtime 1000ps sim:/CPUrequest/CPU_read_HitMiss
+
+wave create -driver freeze -pattern repeater -initialvalue Z -period 50ps -sequence { Z Z 0 1 Z Z 0 1 Z 0  } -repeat never -starttime 0ps -endtime 1000ps sim:/CPUrequest/CPU_write_HitMiss
+
+add wave -position insertpoint  \
+sim:/CPUrequest/next_MSI \
+sim:/CPUrequest/invalidate \
+sim:/CPUrequest/read_miss \
+sim:/CPUrequest/write_miss \
+sim:/CPUrequest/write_back
+
+run
+# CPU read miss | Write-back block | Place read miss on bus
+# CPU read hit
+# CPU write miss | Write-back cache block | Place write miss on bus 
+run
+# CPU write hit
+# CPU read miss| Place read miss on bus
+run
+# CPU read hit
+# CPU write miss | Place write miss on bus
+run
+# CPU write hit | Place invalidate on bus
+# CPU read| Place read miss on bus
+run
+# CPU write | Place write miss on bus
+restart -f
+wave create -driver freeze -pattern repeater -initialvalue 1 -period 100ps -sequence { 1 1 0 0 0  } -repeat never -starttime 0ps -endtime 1000ps sim:/CPUrequest/bitMS
+
+wave create -driver freeze -pattern repeater -initialvalue 0 -period 100ps -sequence { 0 0 0 0 1  } -repeat never -starttime 0ps -endtime 1000ps sim:/CPUrequest/invalid
+
+wave create -pattern repeater -initialvalue 10 -period 100ps -sequence { 10 10 00 00 01  } -repeat never -range 1 0 -starttime 0ps -endtime 1000ps sim:/CPUrequest/MSI
+
+wave create -driver freeze -pattern repeater -initialvalue 0 -period 50ps -sequence { 0 1 Z Z 0 1 Z Z 0 Z  } -repeat never -starttime 0ps -endtime 1000ps sim:/CPUrequest/CPU_read_HitMiss
+
+wave create -driver freeze -pattern repeater -initialvalue Z -period 50ps -sequence { Z Z 0 1 Z Z 0 1 Z 0  } -repeat never -starttime 0ps -endtime 1000ps sim:/CPUrequest/CPU_write_HitMiss
+
+add wave -position insertpoint  \
+sim:/CPUrequest/next_MSI \
+sim:/CPUrequest/invalidate \
+sim:/CPUrequest/read_miss \
+sim:/CPUrequest/write_miss \
+sim:/CPUrequest/write_back
+
+run
+# CPU read miss | Write-back block | Place read miss on bus
+# CPU read hit
+# CPU write miss | Write-back cache block | Place write miss on bus 
+run
+# CPU write hit
+# CPU read miss| Place read miss on bus
+run
+# CPU read hit
+# CPU write miss | Place write miss on bus
+run
+# CPU write hit | Place invalidate on bus
+# CPU read| Place read miss on bus
+run
+# CPU write | Place write miss on bus
+wave export -file C:/PraticaIV_AOC2_parte1/wave_form_CPUrequest.tcl -starttime 0 -endtime 500 -format force -designunit CPUrequest -f
+# 
+# Only editable driver signals present in design can be forced
+# /CPUrequest/MSI will not be exported in "C:/PraticaIV_AOC2_parte1/wave_form_CPUrequest.tcl"force file
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/PraticaIV_AOC2_parte1/wave_CPUrequest.do
+wave editwrite -file C:/PraticaIV_AOC2_parte1/wave_CPUrequest.do -append

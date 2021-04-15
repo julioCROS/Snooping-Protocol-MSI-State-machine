@@ -1,0 +1,35 @@
+|CPUrequest
+bitMS => Mux3.IN4
+bitMS => Mux5.IN4
+bitMS => Decoder0.IN0
+bitMS => Mux2.IN4
+bitMS => Mux1.IN4
+bitMS => Mux4.IN4
+bitMS => Mux0.IN4
+invalid => Mux3.IN5
+invalid => Mux5.IN5
+invalid => Decoder0.IN1
+invalid => Mux2.IN5
+invalid => Mux1.IN5
+invalid => Mux4.IN5
+invalid => Mux0.IN5
+CPU_read_HitMiss => next_MSI[1].IN0
+CPU_read_HitMiss => Mux3.IN1
+CPU_read_HitMiss => write_back.DATAA
+CPU_read_HitMiss => Mux3.IN2
+CPU_read_HitMiss => Mux3.IN3
+CPU_write_HitMiss => invalidate.DATAB
+CPU_write_HitMiss => next_MSI[1].IN1
+CPU_write_HitMiss => Mux4.IN2
+CPU_write_HitMiss => Mux5.IN1
+CPU_write_HitMiss => write_back.OUTPUTSELECT
+CPU_write_HitMiss => Mux5.IN2
+CPU_write_HitMiss => Mux5.IN3
+next_MSI[0] <= next_MSI[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+next_MSI[1] <= next_MSI[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+read_miss <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+invalidate <= invalidate.DB_MAX_OUTPUT_PORT_TYPE
+write_miss <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+write_back <= write_back.DB_MAX_OUTPUT_PORT_TYPE
+
+
